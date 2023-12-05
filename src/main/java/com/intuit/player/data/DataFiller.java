@@ -22,7 +22,7 @@ public class DataFiller {
 
     // this will run once on microservice start up. This will parse player.csv and save to db
     @Bean
-    CommandLineRunner initializeDatabase() {
+    public CommandLineRunner initializeDatabase() {
         return args -> {
             File file = new File(fileName);
             try (Scanner sc = new Scanner(file, StandardCharsets.UTF_8)) {
@@ -45,8 +45,8 @@ public class DataFiller {
         return Arrays.copyOf(row, 24);
     }
 
-    private static int columnToIntVal(String column) {
-        return column.length() == 0 ? 0 : Integer.parseInt(column);
+    private static Integer columnToIntVal(String column) {
+        return (column == null || column.isEmpty()) ? 0 : Integer.parseInt(column);
     }
 
     Player playerFromCSV(String[] row ) {
