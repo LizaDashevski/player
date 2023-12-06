@@ -18,7 +18,8 @@ public class DataFiller {
     @Autowired
     private PlayerRepository playerRepository;
 
-    private static final String fileName = "/resources/player.csv";
+//    private static final String fileName = "/resources/player.csv";
+    private static final String fileName = System.getProperty("user.home")  + "/intuit/player/src/main/resources/player.csv";
 
     // this will run once on microservice start up. This will parse player.csv and save to db
     @Bean

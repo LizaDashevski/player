@@ -12,7 +12,7 @@ services:
 
   app:
     volumes:
-      - ~/intuit/player/src/main/resources:/resources
+      - ~/intuit/player/src/main/resources:/root/intuit/player/src/main/resources
     network_mode: host
     image: player
     build:
