@@ -8,7 +8,7 @@ The application loads the players data from CSV file (player.csv under the resou
 ## Try it out
 Build the app by running:
 ```bash
-mvn clean install
+mvn clean install -DskipTests
 ```
 
 * To run mvn install with the tests we need to have postgres running.
