@@ -2,9 +2,7 @@
 Microservice that expose REST API for getting and listing players
 Spring Boot microservice with spring data and postgres. 
 The application is deployed with docker compose.
-
-## What this repo does
-Load the players data from CSV file into postgres DB
+The application loads the players data from CSV file (player.csv under the resources dir) into postgres DB.
 
 
 ## Try it out
@@ -59,3 +57,5 @@ docker logs player-app-1
 7. I had a mismatch of java versions, mvn java version was 11 and the project used 17.
 I got "Java: Error: Release version 17 not supported". This took a lot of time figuring out.
 In the end I reinstalled java and reconfigured my JAVA_HOME.
+8. I would probably use openCSV instead of file reading to handle csv parsing to Player class
+9. 
